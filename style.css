@@ -1,0 +1,235 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main, .modal__content {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-content: center;
+    height: 500px;
+    width: 750px;
+    border: 2px solid black;
+    margin: 0px;
+    background-image: url("images/wall.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.mainpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left .modal__content {
+    grid-template-columns: 20% 70% 10%;
+    align-items: center;
+}
+
+.arrows {
+    width: 50px;
+    height: auto;
+}
+
+
+.holdingItem {
+    margin: 20px;
+}
+
+
+.trashCan {
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+    width: 150px;
+    height: 150px;
+    background-image: url("images/trashcan.png");
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+}
+
+.tape {
+    width: 80px;
+    height: auto;
+}
+
+
+.tv {
+    position: absolute;
+    top: 27px;
+    left: 181px;
+    width: 400px;
+    height: 200px;
+    background-image: url("images/tv.png");
+    background-size: 400px 200px;
+}
+
+.screen {
+    position: absolute;
+    top: 38px;
+    left: 198px;
+    width: 363px;
+    height: 160px;
+    background-color: black;
+}
+
+.tapeinserted {
+    background-image: url("images/screen.jpeg");
+    background-size: 100% 100%;
+}
+
+.tvstand {
+    position: absolute;
+    left: 157px;
+    width: 450px;
+    height: 250px;
+    background-image: url("images/tvstand.png");
+    background-size: 450px 250px;
+}
+
+.tapeplayer {
+    position: absolute;
+    bottom: 175px;
+    left: 182px;
+    width: 190px;
+    height: 50px;
+    background-image: url("images/tapeplayer.png");
+    background-repeat: no-repeat;
+    background-size: 190px 50px;
+}
+
+.dvdplayer {
+    position: absolute;
+    bottom: 175px;
+    right: 182px;
+    width: 190px;
+    height: 50px;
+    background-image: url("images/dvdplayer.png");
+    background-repeat: no-repeat;
+    background-size: 190px 50px;
+}
+
+
+.curtain {
+    background-image: url("images/curtain.png");
+    height: 500px;
+    width: 200px;
+    background-size: 100% 100%;
+}
+
+.open {
+    background-image: url("images/curtainOpened.png");
+}
+
+
+.safe {
+    position: relative;
+    top: 250px;
+    left: 80px;
+    background-color: gray;
+    width: 125px;
+    height: 150px;
+    border-radius: 10%;
+    background-image: url("images/safe.png");
+    background-position: -75px -10px;
+    background-size: 220% 120%;
+}
+
+.code {
+    position: relative;
+    top: 60px;
+    left: 25px;
+    width: 60px;
+    height: 20px;
+    font-size: 20px;
+    margin: 4px;
+    text-align: center;
+}
+
+.codesubmit {
+    position: relative;
+    top: 84px;
+    right: 36px;
+}
+
+.safecontent {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
+.key {
+    width: 50px;
+    height: 30px;
+}
+
+.door {
+    width: 160px;
+    height: 300px;
+}
+
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 90px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: white;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+  
+.modal__content {
+    position: relative;
+    border: 2px solid black;
+    background-image: url("images/wall.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 500px;
+    width: 760px;
+}
+
+
+.escaped {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    background-color: white;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 500ms ease;
+  }
+  
+  .game-end .escaped {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+
+
+
+
+@media (min-width: 760px) {
+    .main {
+        background-size: 760px 100%;
+    }
+}

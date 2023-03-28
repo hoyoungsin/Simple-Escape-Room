@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body class="body">
+    <div class="mainpage">
+        <h1>Main Room</h1>
+        <div class="main">
+            <p>
+                <a href="#left">
+                    <img src="images/left.png" alt="left" class="arrows">
+                </a>
+            </p>
+            <div><!-- main content--></div>
+            <p>
+                <a href="#right">
+                    <img src="images/right.png" alt="left" class="arrows">
+                </a>
+            </p>
+        </div>
+    </div>
+
+    
+    <!-- left modal -->
+    <div id="left" class="modal">
+        <h1>Computer Room</h1>
+        <div class="modal__content">
+            <div class="curtain"></div>
+            <div>
+                <p class="trashCan"></p>
+            </div>
+            <p>
+                <a href="#" class="modal__close">
+                    <img src="images/right.png" alt= back class ="arrows">
+                </a>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- right modal -->
+    <div id="right" class="modal">
+        <h1>Media Room</h1>
+        <div class="modal__content">
+            <p>
+                <a href="#" class="modal__close">
+                    <img src="images/left.png" alt= back class ="arrows">
+                </a>
+            </p>
+            <div>
+                <p class="tv">
+                    <p class="screen"></p>
+                </p>
+                <p class="tvstand">
+                    <p class="tapeplayer"></p>
+                    <p class="dvdplayer"></p>
+                </p>
+            </div>
+            <p></p>
+        </div>
+
+    </div>
+
+    <div class="holdingItem">
+        <p class="nothing"></p>
+    </div>
+
+    <div class="escaped">
+        <h1>You escaped! Congrats! Now go touch some grass IRL!</h1>
+    </div>
+</body>
+</html>
