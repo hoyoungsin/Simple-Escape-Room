@@ -29,9 +29,13 @@ function createTape () {
     cassetteTape.classList.add("tape");
     trash.append(cassetteTape);
     cassetteTape.addEventListener("click", () => {
-        itemsHeld.innerHTML = ""
-        itemsHeld.append(cassetteTape);
-        alert("It's an old video tape");
+        if (itemsHeld.children[0].classList.contains("key")) {
+            alert("You already found the key to leave! What are you going to do with a video tape you cheater?");
+        }else{
+            itemsHeld.innerHTML = ""
+            itemsHeld.append(cassetteTape);
+            alert("It's an old video tape");
+        }
     });
 };
 
@@ -123,3 +127,83 @@ function useKey () {
     alert("Used the key!");
     body.classList.add("game-end");
 };
+
+
+let dvdPlayer = document.querySelector(".dvdplayer")
+dvdPlayer.addEventListener("click", () => {
+    alert("A dvd player but no dvds...")
+})
+
+// function createClickables () {
+//    let leftWindow = document.createElement("img");
+//    leftWindow.classList.add("clickable")
+//    let rightWindow = document.createElement("img");
+//    rightWindow.classList.add("clickable")
+//    let dvdShelf = document.createElement("img");
+//    dvdShelf.classList.add("clickable")
+//    let computerMonitor = document.createElement("img");   
+//    computerMonitor.classList.add("clickable")
+// }
+
+let clickables = [
+    {
+        name: "Left Window",
+        class: "leftWindow",
+        src: "images/window.png",
+        modal: "main",
+        message: "It's so nice out. There must be a way out"
+    },
+    {
+        name: "Right Window",
+        class: "rightWindow",
+        src: "images/window.png",
+        modal: "main",
+        message: "Why are the window locks on the outside?"
+    },
+    {
+        name: "DVD Shelf",
+        class: "dvdShelf",
+        src: "images/dvdshelf.png",
+        modal: "right",
+        message: "Freddy vs JSON, Arry Potter, Code III, Avatar The Way of Javascript"
+    },
+    {
+        name: "Computer Monitor",
+        class: "monitor",
+        src: "images/monitor.png",
+        modal: "left",
+        message: "Seems like someone punched through the screen."
+    },
+    {
+        name: "Plant",
+        class: "plant1",
+        src: "images/plant1.png",
+        modal: "main",
+        message: "It needs more water huh."
+    },
+    {
+        name: "Plant",
+        class: "plant2",
+        src: "images/plant2.png",
+        modal: "main",
+        message: "This plant isn't even real..."
+    }
+]
+
+for (i = 0; i < clickables.length; i++) {
+    let clickable = document.createElement("img");
+    let message = clickables[i].message;
+    clickable.classList.add("clickable", clickables[i].class);
+    clickable.src = clickables[i].src;
+    clickable.addEventListener("click", () => [
+        alert(message)
+    ])
+    let location = clickables[i].modal
+    if (location === "main") {
+        body.children[0].append(clickable)
+    } if (location === "left") {
+        body.children[1].append(clickable)
+    } if (location === "right") {
+        body.children[2].append(clickable)
+    }
+}

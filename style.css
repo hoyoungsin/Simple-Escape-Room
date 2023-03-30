@@ -41,6 +41,7 @@ body {
 
 
 .trashCan {
+    cursor: pointer;
     position: absolute;
     right: 100px;
     bottom: 40px;
@@ -51,7 +52,19 @@ body {
     background-size: 150px 150px;
 }
 
+.table {
+    position: relative;
+    top: 90px;
+    left: 20px;
+    width: 400px;
+    height: 400px;
+    background-image: url("images/table.png");
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+}
+
 .tape {
+    cursor: pointer;
     width: 80px;
     height: auto;
 }
@@ -68,6 +81,7 @@ body {
 }
 
 .screen {
+    cursor: pointer;
     position: absolute;
     top: 38px;
     left: 198px;
@@ -91,6 +105,7 @@ body {
 }
 
 .tapeplayer {
+    cursor: pointer;
     position: absolute;
     bottom: 175px;
     left: 182px;
@@ -102,6 +117,7 @@ body {
 }
 
 .dvdplayer {
+    cursor: pointer;
     position: absolute;
     bottom: 175px;
     right: 182px;
@@ -114,6 +130,7 @@ body {
 
 
 .curtain {
+    cursor: pointer;
     background-image: url("images/curtain.png");
     height: 500px;
     width: 200px;
@@ -121,6 +138,7 @@ body {
 }
 
 .open {
+    cursor: default;
     background-image: url("images/curtainOpened.png");
 }
 
@@ -150,6 +168,7 @@ body {
 }
 
 .codesubmit {
+    cursor: pointer;
     position: relative;
     top: 84px;
     right: 36px;
@@ -162,13 +181,54 @@ body {
 }
 
 .key {
+    cursor: pointer;
     width: 50px;
     height: 30px;
 }
 
 .door {
+    cursor: pointer;
     width: 160px;
     height: 300px;
+}
+
+.clickable {
+    cursor: pointer;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+.leftWindow {
+    top: 230px;
+    left: 300px;
+}
+
+.rightWindow {
+    top: 230px;
+    right: 300px;
+}
+
+.dvdShelf {
+    bottom: 50px;
+    right: 180px;
+    width: 200px;
+    height: auto;
+}
+
+.monitor {
+    top: 260px;
+}
+
+.plant1 {
+    bottom: 170px;
+    left: 280px;
+
+}
+
+.plant2 {
+    bottom: 170px;
+    right: 280px;
 }
 
 
@@ -217,15 +277,13 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 500ms ease;
-  }
+}
   
-  .game-end .escaped {
+.game-end .escaped {
     opacity: 1;
     pointer-events: all;
-  }
+}
   
-
-
 
 
 @media (min-width: 760px) {
