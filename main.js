@@ -200,10 +200,10 @@ for (i = 0; i < clickables.length; i++) {
     ])
     let location = clickables[i].modal
     if (location === "main") {
-        body.children[0].append(clickable)
+        body.children[0].children[1].children[1].append(clickable)
     } if (location === "left") {
-        body.children[1].append(clickable)
+        body.children[1].children[1].children[1].append(clickable)
     } if (location === "right") {
-        body.children[2].append(clickable)
+        body.children[2].children[1].children[1].append(clickable)
     }
 }
